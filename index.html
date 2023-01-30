@@ -23,6 +23,7 @@
         <h2>Presentation TYPESCRIPT</h2>
         <p>Made by Inna Astankovich</p>
         <p>The Rolling Scopes School, 2023</p>
+        <img src="./assets/one.jpg" alt="any" width="500">
       </section>
       <!-- slide 1 -->
       <section data-transition="slide-in convex-out">
@@ -30,10 +31,9 @@
           <h2> Introduction to TypeScript</h2>
           <ul>TypeScript is:
             <li> a strongly typed,</li>
-            <li>object-oriented,</li>
-            <li>compiled programming language that builds on JavaScript.</li>
-            <li>It is a superset of the JavaScript language, designed to give you better tooling at any scale.</li>
-            <li>TypeScript is open source, backed by Microsoft, and considered both a language and a set of tools.</li>
+            <li>object-oriented.</li>
+            <li>It is a superset of the JavaScript language.</li>
+            <li>TypeScript is open source, backed by Microsoft.</li>
           </ul>
         </section>
         <section data-transition="slide-in convex-out">
@@ -46,8 +46,6 @@
       <section data-transition="slide-in convex-out">
         <section>
           <h2>What TypeScript Does</h2>
-          <div>TypeScript is often considered “JavaScript and more.” More precisely, there are four main goals of
-            TypeScript:</div>
           <ul>
             <li>Make JavaScript development more efficient</li>
             <li>Introduce optional types to JavaScript</li>
@@ -57,16 +55,15 @@
         </section>
         <section data-transition="slide-in convex-out">
           <h3>Static Typing and Type Inference</h3>
-          <div>With TLS (the TypeScript Language Service mentioned above), TypeScript has an optional static typing and
-            type inference system that can infer undeclared variables. Thus, by adding type support to JavaScript,
-            TypeScript can effectively mitigate type errors during compilation to JavaScript.</div>
+          <div>TypeScript has an optional static typing and
+            type inference system that can infer undeclared variables.</div>
+          <div> Thus, TypeScript can effectively mitigate type errors during compilation to JavaScript.</div>
         </section>
         <section>
           <h3>Compilation</h3>
           <div>
-            TypeScript helps make error checking easier.
             As TypeScript compiles the code, it will identify syntax errors and notify users by generating compilation
-            errors. Thus, TypeScript helps users catch bugs at the compile time instead of waiting until runtime.
+            errors.
           </div>
         </section>
       </section>
@@ -74,21 +71,18 @@
       <section data-transition="slide-in convex-out">
         <h2> Components of TypeScript</h2>
         <ul>
-          <li>Language: the syntax, keywords, and type annotations.</li>
-          <li>The TypeScript Compiler (TSC): converts the instructions written in TypeScript to its JavaScript
-            equivalent.</li>
-          <li>The TypeScript Language Service: an additional layer of editor-like applications, such as statement
-            completion, signature help, code formatting, and colorization, among other things.</li>
+          <li>Language</li>
+          <li>The TypeScript Compiler (TSC).</li>
+          <li>The TypeScript Language Service.</li>
         </ul>
       </section>
       <!-- Slide-4 How to get started -->
       <section data-transition="slide-in convex-out">
-        <h3>How to Get Started with TypeScript</h3>
-        <p>The most common way to use TypeScript is to use TSC:</p>
+        <h3>How to Get Started with TypeScript:</h3>
         <ul>
           <li>Write the TypeScript code.</li>
           <li>Then, use TSC to compile the TypeScript code into plain JavaScript code.</li>
-          <li>Finally, deploy the JavaScript code to any environment that runs JavaScript.</li>
+          <li>Deploy the JavaScript code to any environment that runs JavaScript.</li>
         </ul>
       </section>
       <!-- Slide-5 Features-->
@@ -120,9 +114,7 @@
       <!-- types-6 -->
       <section data-transition="slide-in convex-out">
         <h4>Basic Types</h4>
-        <p>For programs to be useful, we need to be able to work with some of the simplest units of data: numbers,
-          strings, structures, boolean values, and the like. In TypeScript, we support the same types as you would
-          expect in JavaScript, with an extra enumeration type.</p>
+        <img src="./assets/types.jpg" alt="any" width="300">
         <h5>Boolean</h5>
         <p>The most basic datatype is the simple true/false value, which JavaScript and TypeScript call a boolean
           value.</p>
@@ -135,9 +127,7 @@
       <!-- types-7 -->
       <section data-transition="slide-in convex-out">
         <h4>Number</h4>
-        <p>As in JavaScript, all numbers in TypeScript are either floating point values or BigIntegers. These floating
-          point numbers get the type number, while BigIntegers get the type bigint. In addition to hexadecimal and
-          decimal literals, TypeScript also supports binary and octal literals.</p>
+        <p>As in JavaScript, all numbers in TypeScript are either floating point values or BigIntegers.</p>
         <pre class="back-code">
     <code>
       let decimal: number = 6;
@@ -152,9 +142,8 @@
       <!-- types-8 -->
       <section data-transition="slide-in convex-out">
         <h4>String</h4>
-        <p>Another fundamental part of creating programs in JavaScript for webpages and servers alike is working with
-          textual data. As in other languages, we use the type string to refer to these textual datatypes. Just like
-          JavaScript, TypeScript also uses double quotes (") or single quotes (') to surround string data. <br>
+        <p>As in other languages, we use the type string to refer to these textual datatypes. TypeScript also uses
+          double quotes (") or single quotes (') to surround string data. <br>
           You can also use template strings</p>
         <pre class="back-code">
           <code>
@@ -166,7 +155,7 @@
       <!-- types-9 -->
       <section data-transition="slide-in convex-out">
         <h4>Array</h4>
-        <p>TypeScript, like JavaScript, allows you to work with arrays of values. Array types can be written in one of
+        <p>Array types can be written in one of
           two ways. In the first, you use the type of the elements followed by [] to denote an array of that element
           type:</p>
         <pre class="back-code">
@@ -174,7 +163,7 @@
             let list: number[] = [1, 2, 3];
           </code>
         </pre>
-        <p>The second way uses a generic array type. Like this:</p>
+        <p>The second way uses a generic array type.</p>
         <pre class="back-code">
           <code>
             let list: Array &lt;number&gt; = [1, 2, 3];
@@ -185,7 +174,7 @@
       <section data-transition="slide-in convex-out">
         <h4>Tuple</h4>
         <p>Tuple types allow you to express an array with a fixed number of elements whose types are known, but need not
-          be the same. For example, you may want to represent a value as a pair of a string and a number:</p>
+          be the same.</p>
         <pre class="back-code">
           <code>
             // Declare a tuple type
@@ -202,7 +191,7 @@
       <!-- types-11 -->
       <section data-transition="slide-in convex-out">
         <h4>Enum</h4>
-        <p>A helpful addition to the standard set of datatypes from JavaScript is the enum. As in languages like C#, an
+        <p>A helpful addition to the standard set of datatypes from JavaScript is the enum. An
           enum is a way of giving more friendly names to sets of numeric values.</p>
         <pre class="back-code">
           <code>
@@ -219,8 +208,7 @@
       <section data-transition="slide-in convex-out">
         <h4>Enum</h4>
         <p>By default, enums begin numbering their members starting at 0. You can change this by manually setting the
-          value of one of its members. For example, we can start the previous example at 1 instead of 0. Or, even
-          manually set all the values in the enum:</p>
+          value of one of its members.</p>
         <pre class="back-code">
           <code>
             enum Color {
@@ -236,8 +224,7 @@
       <section data-transition="slide-in convex-out">
         <h4>Unknown</h4>
         <p>We may need to describe the type of variables that we do not know when we are writing an application.
-          In these cases, we want to provide a type that tells the compiler and future readers that this
-          variable could be anything, so we give it the unknown type.</p>
+          This variable could be anything, so we give it the unknown type.</p>
         <pre class="back-code">
           <code>
             let notSure: unknown = 4;
@@ -250,16 +237,13 @@
       <!-- types-14 -->
       <section data-transition="slide-in convex-out">
         <h4>Any</h4>
-        <p>In some situations, not all type information is available or its declaration would take an inappropriate
-          amount of effort.
-          In these cases, we might want to opt-out of type checking. To do so, we label these values with the any type:
-        </p>
         <pre class="back-code">
       <code>
         function getValue(key: string): any;
         // OK, return value of 'getValue' is not checked
         const str: string = getValue("myString");
       </code>
+<img src="./assets/any.jpg" alt="any">
     </pre>
       </section>
       <!-- types-15 -->
@@ -317,7 +301,10 @@
             TypeScript into JavaScript.</li>
         </ul>
       </section>
-      <section data-transition="slide-in convex-out">Good buy! And happy coding!!!</section>
+      <section data-transition="slide-in convex-out">Good buy! And happy coding!!!
+        <img src="./assets/end.jpg" alt="any" width="500">
+      </section>
+
 
 
     </div>
