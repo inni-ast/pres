@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/solarized.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- slide 0 -->
+      <section data-transition="slide-in convex-out">
+        <h2>Presentation TYPESCRIPT</h2>
+        <p>Made by Inna Astankovich</p>
+        <p>The Rolling Scopes School, 2023</p>
+      </section>
+      <!-- slide 1 -->
+      <section data-transition="slide-in convex-out">
+        <section>
+          <h2> Introduction to TypeScript</h2>
+          <ul>TypeScript is:
+            <li> a strongly typed,</li>
+            <li>object-oriented,</li>
+            <li>compiled programming language that builds on JavaScript.</li>
+            <li>It is a superset of the JavaScript language, designed to give you better tooling at any scale.</li>
+            <li>TypeScript is open source, backed by Microsoft, and considered both a language and a set of tools.</li>
+          </ul>
+        </section>
+        <section data-transition="slide-in convex-out">
+          <div>TypeScript was released to the public in October 2012.</div>
+          <div>Current version - TypeScript 4.0 was released on 20 August 2020</div>
+        </section>
+      </section>
+      <!-- slide 2 -->
+      <!-- What TypeScript Does -->
+      <section data-transition="slide-in convex-out">
+        <section>
+          <h2>What TypeScript Does</h2>
+          <div>TypeScript is often considered “JavaScript and more.” More precisely, there are four main goals of
+            TypeScript:</div>
+          <ul>
+            <li>Make JavaScript development more efficient</li>
+            <li>Introduce optional types to JavaScript</li>
+            <li>Help catch mistakes earlier</li>
+            <li>Implement planned features of future JavaScript</li>
+          </ul>
+        </section>
+        <section data-transition="slide-in convex-out">
+          <h3>Static Typing and Type Inference</h3>
+          <div>With TLS (the TypeScript Language Service mentioned above), TypeScript has an optional static typing and
+            type inference system that can infer undeclared variables. Thus, by adding type support to JavaScript,
+            TypeScript can effectively mitigate type errors during compilation to JavaScript.</div>
+        </section>
+        <section>
+          <h3>Compilation</h3>
+          <div>
+            TypeScript helps make error checking easier.
+            As TypeScript compiles the code, it will identify syntax errors and notify users by generating compilation
+            errors. Thus, TypeScript helps users catch bugs at the compile time instead of waiting until runtime.
+          </div>
+        </section>
+      </section>
+      <!-- Slide-3 components -->
+      <section data-transition="slide-in convex-out">
+        <h2> Components of TypeScript</h2>
+        <ul>
+          <li>Language: the syntax, keywords, and type annotations.</li>
+          <li>The TypeScript Compiler (TSC): converts the instructions written in TypeScript to its JavaScript
+            equivalent.</li>
+          <li>The TypeScript Language Service: an additional layer of editor-like applications, such as statement
+            completion, signature help, code formatting, and colorization, among other things.</li>
+        </ul>
+      </section>
+      <!-- Slide-4 How to get started -->
+      <section data-transition="slide-in convex-out">
+        <h3>How to Get Started with TypeScript</h3>
+        <p>The most common way to use TypeScript is to use TSC:</p>
+        <ul>
+          <li>Write the TypeScript code.</li>
+          <li>Then, use TSC to compile the TypeScript code into plain JavaScript code.</li>
+          <li>Finally, deploy the JavaScript code to any environment that runs JavaScript.</li>
+        </ul>
+      </section>
+      <!-- Slide-5 Features-->
+      <section data-transition="slide-in convex-out">
+        <section>
+          <h4>TypeScript is a language extension that adds features to ECMAScript 6. Additional features include:</h4>
+          <ul>
+            <li>Type annotations and compile-time type checking</li>
+            <li>Type inference</li>
+            <li>Type erasure</li>
+            <li>Interfaces</li>
+            <li>Enumerated types</li>
+            <li>Generics</li>
+            <li>Namespaces</li>
+            <li>Tuples</li>
+            <li>Async/await</li>
+          </ul>
+        </section>
+        <section>
+          <div>The following features are backported from ECMAScript 2015:</div>
+          <ul>
+            <li>Classes</li>
+            <li>Modules</li>
+            <li>Abbreviated "arrow" syntax for anonymous functions</li>
+            <li>Optional parameters and default parameters</li>
+          </ul>
+        </section>
+      </section>
+      <!-- types-6 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Basic Types</h4>
+        <p>For programs to be useful, we need to be able to work with some of the simplest units of data: numbers,
+          strings, structures, boolean values, and the like. In TypeScript, we support the same types as you would
+          expect in JavaScript, with an extra enumeration type.</p>
+        <h5>Boolean</h5>
+        <p>The most basic datatype is the simple true/false value, which JavaScript and TypeScript call a boolean
+          value.</p>
+        <pre class="back-code">
+            <code>
+              let isDone: boolean = false;
+            </code>
+        </pre>
+      </section>
+      <!-- types-7 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Number</h4>
+        <p>As in JavaScript, all numbers in TypeScript are either floating point values or BigIntegers. These floating
+          point numbers get the type number, while BigIntegers get the type bigint. In addition to hexadecimal and
+          decimal literals, TypeScript also supports binary and octal literals.</p>
+        <pre class="back-code">
+    <code>
+      let decimal: number = 6;
+      let hex: number = 0xf00d;
+      let binary: number = 0b1010;
+      let octal: number = 0o744;
+      let big: bigint = 100n;
+    </code>
+</pre>
+      </section>
+
+      <!-- types-8 -->
+      <section data-transition="slide-in convex-out">
+        <h4>String</h4>
+        <p>Another fundamental part of creating programs in JavaScript for webpages and servers alike is working with
+          textual data. As in other languages, we use the type string to refer to these textual datatypes. Just like
+          JavaScript, TypeScript also uses double quotes (") or single quotes (') to surround string data. <br>
+          You can also use template strings</p>
+        <pre class="back-code">
+          <code>
+            let color: string = "blue";
+            color = 'red';
+          </code>
+        </pre>
+      </section>
+      <!-- types-9 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Array</h4>
+        <p>TypeScript, like JavaScript, allows you to work with arrays of values. Array types can be written in one of
+          two ways. In the first, you use the type of the elements followed by [] to denote an array of that element
+          type:</p>
+        <pre class="back-code">
+          <code>
+            let list: number[] = [1, 2, 3];
+          </code>
+        </pre>
+        <p>The second way uses a generic array type. Like this:</p>
+        <pre class="back-code">
+          <code>
+            let list: Array &lt;number&gt; = [1, 2, 3];
+          </code>
+        </pre>
+      </section>
+      <!-- types-10 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Tuple</h4>
+        <p>Tuple types allow you to express an array with a fixed number of elements whose types are known, but need not
+          be the same. For example, you may want to represent a value as a pair of a string and a number:</p>
+        <pre class="back-code">
+          <code>
+            // Declare a tuple type
+            let x: [string, number];
+            // Initialize it
+            x = ["hello", 10]; // OK
+            // Initialize it incorrectly
+            x = [10, "hello"]; // Error
+            Type 'number' is not assignable to type 'string'.
+            Type 'string' is not assignable to type 'number'.
+          </code>
+        </pre>
+      </section>
+      <!-- types-11 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Enum</h4>
+        <p>A helpful addition to the standard set of datatypes from JavaScript is the enum. As in languages like C#, an
+          enum is a way of giving more friendly names to sets of numeric values.</p>
+        <pre class="back-code">
+          <code>
+            enum Color {
+              Red,
+              Green,
+              Blue,
+            }
+            let c: Color = Color.Green;
+          </code>
+        </pre>
+      </section>
+      <!-- types-12 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Enum</h4>
+        <p>By default, enums begin numbering their members starting at 0. You can change this by manually setting the
+          value of one of its members. For example, we can start the previous example at 1 instead of 0. Or, even
+          manually set all the values in the enum:</p>
+        <pre class="back-code">
+          <code>
+            enum Color {
+              Red = 1,
+              Green = 2,
+              Blue = 4,
+            }
+            let c: Color = Color.Green;
+          </code>
+        </pre>
+      </section>
+      <!-- types-13 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Unknown</h4>
+        <p>We may need to describe the type of variables that we do not know when we are writing an application.
+          In these cases, we want to provide a type that tells the compiler and future readers that this
+          variable could be anything, so we give it the unknown type.</p>
+        <pre class="back-code">
+          <code>
+            let notSure: unknown = 4;
+            notSure = "maybe a string instead";
+            // OK, definitely a boolean
+            notSure = false;
+          </code>
+        </pre>
+      </section>
+      <!-- types-14 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Any</h4>
+        <p>In some situations, not all type information is available or its declaration would take an inappropriate
+          amount of effort.
+          In these cases, we might want to opt-out of type checking. To do so, we label these values with the any type:
+        </p>
+        <pre class="back-code">
+      <code>
+        function getValue(key: string): any;
+        // OK, return value of 'getValue' is not checked
+        const str: string = getValue("myString");
+      </code>
+    </pre>
+      </section>
+      <!-- types-15 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Void</h4>
+        <p>void is a little like the opposite of any: the absence of having any type at all.
+          You may commonly see this as the return type of functions that do not return a value:
+        </p>
+        <pre class="back-code">
+            <code>
+              function warnUser(): void {
+                console.log("This is my warning message");
+              }
+            </code>
+        </pre>
+      </section>
+      <!-- types-16 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Null and Undefined</h4>
+        <p>In TypeScript, both undefined and null actually have their types:
+        </p>
+        <pre class="back-code">
+                  <code>
+                    // Not much else we can assign to these variables!
+                    let u: undefined = undefined;
+                    let n: null = null;
+                  </code>
+              </pre>
+      </section>
+      <!-- types-17 -->
+      <section data-transition="slide-in convex-out">
+        <h4>Never</h4>
+        <p>The never type represents the type of values that never occur. </p>
+        <pre class="back-code">
+          <code>
+        // Function returning never must not
+        have a reachable end point
+        function error(message: string): never {
+        throw new Error(message);
+        }
+
+        function infiniteLoop(): never {
+        while (true) {}
+        }
+          </code>
+        </pre>
+      </section>
+      <!-- Slide-18 Disadvantage-->
+      <section data-transition="slide-in convex-out">
+        <h4>Disadvantage of TypeScript over JavaScript</h4>
+        <ul>
+          <li>TypeScript takes a long time to compile the code.</li>
+          <li>TypeScript does not support abstract classes.</li>
+          <li>If we run the TypeScript application in the browser, a compilation step is required to transform
+            TypeScript into JavaScript.</li>
+        </ul>
+      </section>
+      <section data-transition="slide-in convex-out">Good buy! And happy coding!!!</section>
+
+
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>
